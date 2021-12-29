@@ -1,10 +1,34 @@
+/* FONTS */
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Bold.woff2") format("woff2"),
+        url("/fonts/Roboto-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.woff2") format("woff2"),
+        url("/fonts/Roboto-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 /* GLOBAL */
 html {
     height: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+* {
+    padding: 0;
+    margin: 0;
+}
 *,
 *::before,
 *::after {
@@ -12,10 +36,9 @@ html {
 }
 
 body {
+    font-family: "Roboto";
     height: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #fff;
+    background-color: black;
     color: #222;
 }
 
@@ -32,4 +55,103 @@ img {
     padding-right: 50px;
     margin-right: auto;
     margin-left: auto;
+}
+
+/* MAIN */
+.main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+    background-color : #fdec51;
+    padding: 30px 50px;
+}
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-title {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+}
+.main-button {
+    display: block;
+    color: #7e762a;
+    text-decoration: none;
+}
+.main-button i {
+    display: block;
+}
+.in-main {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    background-color: #fff;
+    padding: 70px 30px 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    width: 600px;
+}
+.in-main__image {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.form-textarea:focus,
+.form-input:focus {
+    outline: 2px dashed rgb(207, 207, 114);
+}
+.form-members {
+    display: flex;
+}
+.member {
+    width: 50%;
+}
+.form-label {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #b0abaa;
+    margin-bottom: 10px;
+}
+.form-input {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #b0abaa;
+}
+
+.form-textarea {
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    height: 80px;
+    resize: vertical;
+}
+.main-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+.main-bottom-button {
+    border: none;
+    background-color: #fdec51;
+    color: #878043;
+    margin-left: 30px;
+    font-size: 20px;
+    cursor: pointer;
 }
